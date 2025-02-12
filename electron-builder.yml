@@ -1,0 +1,15 @@
+appId: org.konshin.nextelectronrsc
+productName: Next Electon RSC
+
+directories: 
+output: dist
+buildResources: assets
+
+#asarUnpack
+# - '**/.next/cache/**/*'
+assar: false
+
+files: 
+-build
+-'.next/standalone/demo/**/*'
+-'.next/standalone/demo/**/node_modules/**'

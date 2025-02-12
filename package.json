@@ -1,0 +1,148 @@
+{
+  "name": "loan-app",
+  "version": "0.1.0",
+  "private": true,
+  "author": "genius",
+  "main": "main/main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "devE": "concurrently -n \"NEXT,ELECTRON\" -c \"yellow,blue\" --kill-others \"next dev\" \"electron .\"",
+    "build": "next build",
+    "buildE": "next build && electron-builder",
+    "start": "next start",
+    "lint": "next lint",
+    "tauri": "tauri",
+    "node": "node",
+    "db:studio": "drizzle-kit studio",
+    "estart": "electron-forge start",
+    "ebuild": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "dist": "electron-builder --win",
+    "electron:serve": "concurrently -k \"cross-env BROWSER=none npm run dev\" \"npm run electron:start\"",
+    "electron:build": "yarn build && electron-builder -c.extraMetadata.main=build/main.js",
+    "electron:start": "wait-on tcp:3000 && electron .",
+    "electron-pack": "build --em.main=build/main.js",
+    "preelectron-pack": "yarn build",
+    "edev": "concurrently \"electron .\"\"npm start\"",
+    "electron": "electron .",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "makeelectron": "electron-builder ",
+    "rebuild": ".\\node_modules\\.bin\\electron-rebuild.cmd -f -m ./node_modules/better-sqlite3"
+  },
+  "dependencies": {
+    "@ducanh2912/next-pwa": "^10.2.9",
+    "@hookform/resolvers": "^3.9.0",
+    "@leafac/sqlite": "^4.0.0",
+    "@radix-ui/react-dialog": "^1.1.1",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-progress": "^1.1.0",
+    "@radix-ui/react-select": "^2.1.1",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-tabs": "^1.1.0",
+    "@sentry/nextjs": "^8.28.0",
+    "@types/mysql": "^2.15.26",
+    "appwrite": "^14.0.1",
+    "better-sqlite3": "^11.3.0",
+    "chart.js": "^4.4.4",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "cross-env": "^7.0.3",
+    "D": "^1.0.0",
+    "drizzle-orm": "^0.33.0",
+    "dwolla-v2": "^3.4.0",
+    "electorn": "^0.0.1-security",
+    "electron-is-dev": "^3.0.1",
+    "electron-serve": "^2.1.1",
+    "lucide-react": "^0.436.0",
+    "mysql": "^2.18.1",
+    "next": "14.2.7",
+    "next-electron-rsc": "^0.2.3",
+    "node-appwrite": "^14.0.0",
+    "plaid": "^26.0.0",
+    "query-string": "^9.1.0",
+    "react": "^18",
+    "react-chartjs-2": "^5.2.0",
+    "react-countup": "^6.5.3",
+    "react-dom": "^18",
+    "react-hook-form": "^7.53.0",
+    "react-plaid-link": "^3.6.0",
+    "sentry": "^0.1.2",
+    "sqlite3": "^5.1.7",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7",
+    "wait-on": "^7.2.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.4.0",
+    "@electron-forge/maker-deb": "^7.4.0",
+    "@electron-forge/maker-rpm": "^7.4.0",
+    "@electron-forge/maker-squirrel": "^7.4.0",
+    "@electron-forge/maker-zip": "^7.4.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.4.0",
+    "@electron-forge/plugin-fuses": "^7.4.0",
+    "@electron/fuses": "^1.8.0",
+    "@tauri-apps/cli": "^1.6.1",
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "concurrently": "^9.1.0",
+    "drizzle-kit": "^0.24.2",
+    "electron": "^33.2.0",
+    "electron-builder": "^24.13.3",
+    "electron-rebuild": "^3.2.9",
+    "electron-squirrel-startup": "^1.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.7",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  },
+  "win": {
+    "target": [
+      "nsis"
+    ],
+    "icon": "build/icon.ico"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "build": {
+    "appId": "com.forgeForKids.electron-cra",
+    "productName": "Forge tutorial App",
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "buildNumber": "1",
+  "nsis": {
+    "oneClick": false,
+    "perMachine": true,
+    "allowToChangeInstallationDirectroy": true,
+    "installerSidebar": "build/installerSidebar.bmp",
+    "artifactName": "${productName} Setup ${version}.${buildNumber}.exe",
+    "include": "build/installer.nsh",
+    "license": "build/ProfinetLicence.rft",
+    "uninstallDisplayName": "${productName}",
+    "deleteAppDataOnUninstall": true
+  }
+}
