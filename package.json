@@ -69,7 +69,6 @@
     "react-hook-form": "^7.53.0",
     "react-plaid-link": "^3.6.0",
     "sentry": "^0.1.2",
-    "sqlite3": "^5.1.7",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
     "wait-on": "^7.2.0",
