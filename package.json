@@ -50,7 +50,6 @@
     "clsx": "^2.1.1",
     "cross-env": "^7.0.3",
     "D": "^1.0.0",
-    "drizzle-orm": "^0.33.0",
     "dwolla-v2": "^3.4.0",
     "electorn": "^0.0.1-security",
     "electron-is-dev": "^3.0.1",
