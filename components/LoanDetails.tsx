@@ -76,7 +76,7 @@ const LoanDetails = ({setShow, data}:any) => {
 
                 <div className="item">
                     <div className="title">
-                        GUARANTOR'S OCCUPATION:
+                        GUARANTORS OCCUPATION:
                     </div>
                     <div className="description">
                         {data.guarantorOccupation}
@@ -84,7 +84,7 @@ const LoanDetails = ({setShow, data}:any) => {
                 </div>
                 <div className="item">
                     <div className="title">
-                        GUARANTOR'S CONTACT:
+                        GUARANTORS CONTACT:
                     </div>
                     <div className="description">
                         {data.guarantorContact}
@@ -92,7 +92,7 @@ const LoanDetails = ({setShow, data}:any) => {
                 </div>
                 <div className="item">
                     <div className="title">
-                        GUARANTOR'S ADDRESS:
+                        GUARANTORS ADDRESS:
                     </div>
                     <div className="description">
                         {data.guarantorAddress}
