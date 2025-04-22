@@ -350,10 +350,10 @@ const LoanForm = ({ accounts }: PaymentTransferFormProps) => {
 
   <div className="payment-transfer_form-details">
           <h2 className="text-18 font-semibold text-gray-900">
-            Guarantor's details
+            Guarantors details
           </h2>
           <p className="text-16 font-normal text-gray-600">
-            Enter the guarantor's details
+            Enter the guarantors details
           </p>
         </div>
 
@@ -365,7 +365,7 @@ const LoanForm = ({ accounts }: PaymentTransferFormProps) => {
             <FormItem className="border-y border-gray-200">
               <div className="payment-transfer_form-item py-5">
                 <FormLabel className="text-14 w-full max-w-[280px] font-medium text-gray-700">
-                  Guarantor's Name
+                  Guarantors Name
                 </FormLabel>
                 <div className="flex w-full flex-col">
                   <FormControl>
@@ -388,7 +388,7 @@ const LoanForm = ({ accounts }: PaymentTransferFormProps) => {
             <FormItem className="border-y border-gray-200">
               <div className="payment-transfer_form-item py-5">
                 <FormLabel className="text-14 w-full max-w-[280px] font-medium text-gray-700">
-                  Guarantor's Occupation
+                  Guarantors Occupation
                 </FormLabel>
                 <div className="flex w-full flex-col">
                   <FormControl>
@@ -412,7 +412,7 @@ const LoanForm = ({ accounts }: PaymentTransferFormProps) => {
             <FormItem className="border-y border-gray-200">
               <div className="payment-transfer_form-item py-5">
                 <FormLabel className="text-14 w-full max-w-[280px] font-medium text-gray-700">
-                  Guarantor's Phone Number
+                  Guarantors Phone Number
                 </FormLabel>
                 <div className="flex w-full flex-col">
                   <FormControl>
@@ -437,7 +437,7 @@ const LoanForm = ({ accounts }: PaymentTransferFormProps) => {
             <FormItem className="border-y border-gray-200">
               <div className="payment-transfer_form-item py-5">
                 <FormLabel className="text-14 w-full max-w-[280px] font-medium text-gray-700">
-                  Guarantor's Address
+                  Guarantors Address
                 </FormLabel>
                 <div className="flex w-full flex-col">
                   <FormControl>
